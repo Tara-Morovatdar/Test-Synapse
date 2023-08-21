@@ -36,16 +36,16 @@ jobs:
       - name: Synapse workspace deployment
         uses: Azure/Synapse-workspace-deployment@V1.8.0
         with:
-          TargetWorkspaceName: ws-synapse-tm
-          TemplateFile: './TemplateForWorkspace.json'
-          DeleteArtifactsNotInTemplate: true
-          ParametersFile: './TemplateParametersForWorkspace.json'
+          TargetWorkspaceName: 'ws-synapse-tm'
+          TemplateFile: './ws-synapse-tm/TemplateForWorkspace.json'
+          ParametersFile: './ws-synapse-tm/TemplateParametersForWorkspace.json'
           environment: 'Azure Public'
-          resourceGroup: DNA_Reporting
-          clientId: ${{ secrets.CLIENT_ID }}
-          clientSecret: ${{ secrets.CLIENT_SECRET }}
+          resourceGroup: 'DNA_Reporting'
+          # clientId: ${{ secrets.CLIENT_ID }}
+          # clientSecret: ${{ secrets.CLIENT_SECRET }}
           subscriptionId: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
           tenantId: ${{ secrets.AZURE_TENANT_ID }}
+          DeleteArtifactsNotInTemplate: 'true'
           operation: 'deploy'
 
       - name: Start Synapse Triggers
