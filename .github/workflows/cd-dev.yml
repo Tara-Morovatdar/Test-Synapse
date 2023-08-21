@@ -50,9 +50,9 @@ jobs:
           DeleteArtifactsNotInTemplate: 'true'
           operation: 'deploy'
 
-      - name: Start Synapse Triggers
-        run: |
-          az synapse trigger start --name "TriggerName" --workspace-name "${{ secrets.WORKSPACE }}"
+      # - name: Start Synapse Triggers
+      #   run: |
+      #     az synapse trigger start --name "TriggerName" --workspace-name "${{ secrets.WORKSPACE }}"
 
       # runs-on: ubuntu-latest     
       # steps:
