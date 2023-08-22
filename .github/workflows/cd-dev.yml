@@ -44,10 +44,11 @@ jobs:
           environment: 'Azure Public'
           resourceGroup: 'DNA_Reporting'
           # clientId: ${{ secrets.CLIENT_ID }}
+          managedIdentity: true
           # clientSecret: ${{ secrets.CLIENT_SECRET }}
           subscriptionId: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
           tenantId: ${{ secrets.AZURE_TENANT_ID }}
-          DeleteArtifactsNotInTemplate: 'true'
+          #DeleteArtifactsNotInTemplate: 'true'
           operation: 'deploy'
 
       # - name: Start Synapse Triggers
