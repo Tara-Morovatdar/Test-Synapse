@@ -48,31 +48,5 @@ jobs:
           # clientSecret: ${{ secrets.CLIENT_SECRET }}
           subscriptionId: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
           tenantId: ${{ secrets.AZURE_TENANT_ID }}
-          #DeleteArtifactsNotInTemplate: 'true'
+          DeleteArtifactsNotInTemplate: 'true'
           operation: 'deploy'
-
-      # - name: Start Synapse Triggers
-      #   run: |
-      #     az synapse trigger start --name "TriggerName" --workspace-name "${{ secrets.WORKSPACE }}"
-
-      # runs-on: ubuntu-latest     
-      # steps:
-      #   # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      #   - name: Checkout code
-      #     uses: actions/checkout@v3
-      #   - name: Deploy Azure Resource Manager (ARM) Template              
-      #     # uses: Azure/arm-deploy@v1
-      #   - uses: azure/synapse-workspace-deployment@release-1.0
-      #     with:
-      #       TargetWorkspaceName: ws-synapse-tm
-      #       TemplateFile: './path of the TemplateForWorkspace.json'
-      #       ParametersFile: './path of the TemplateParametersForWorkspace.json'
-      #       OverrideArmParameters: './path of the parameters.yaml'
-      #       environment: 'Azure Public'
-      #       resourceGroup: 'target workspace resource group'
-      #       clientId: ${{ secrets.AZURE_CLIENT_ID }}
-      #       clientSecret:  ${{secrets.CLIENTSECRET}}
-      #       subscriptionId: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
-      #       tenantId: ${{ secrets.AZURE_TENANT_ID }}
-      #       DeleteArtifactsNotInTemplate: 'true'
-      #       managedIdentity: 'False'
